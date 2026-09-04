@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrument Store</title>
+</head>
+<body>
+    <h1>Available Instruments</h1>
+    
+    <ul>
+        {% for instrument in instruments %}
+            <li><strong>{{ instrument.name }}</strong> — {{ instrument.category }}</li>
+        {% empty %}
+            <li>No instruments found in Supabase yet!</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
